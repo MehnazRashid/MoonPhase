@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>Moon Phase</title>
+   <style>
+      
+      body{
+         background-color: black;
+         margin: 0;
+         padding: 0;
+         height: 100vh;
+         width: 100%;
+         overflow: hidden;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         
+      }
+      
+      :root {
+         font-size: 10px;
+      }
+      
+      .main{
+         width: 100%;
+         height: 70vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+      .main img{
+         height:65vh;
+         width:auto;
+      }
+      .main p{
+         color: #c9c3bf;
+         font-size: 2.8rem;
+         font-family: "Lora", serif;
+         font-optical-sizing: auto;
+         font-weight: 500;
+         font-style: normal;
+      }
+   </style>
+</head>
+<body>
+   <div class="main">
+<p class="title">Today's Moon</p>
+<img src="{{ url_for('static', filename='images/' + moon_image) }}" alt="Current Moon Phase">
+   </div>
+  
+</body>
+</html>
